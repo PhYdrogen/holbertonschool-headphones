@@ -1,0 +1,124 @@
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(src/font/SourceSansPro-Regular.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(src/font/SourceSansPro-Light.otf) format("opentype");
+  font-weight: lighter;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url(src/font/SourceSansPro-Bold.otf) format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+html {
+  --text-white: #ffff;
+  --text-big: 32px;
+  --text-normal: 16px;
+  --text-nav-size: 12px;
+  --color-red: #FF6565;
+  --color-dark-blue: #071629;
+  --color-black: #071629;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: normal;
+}
+h1 {
+  font-size: 32px;
+}
+p {
+  font-size: 16px;
+}
+/* Header */
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fill;
+  height: 800px;
+  background-image: url("/images/headphones_hero_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: var(--text-white);
+
+}
+
+header>nav {
+  max-width: 1000px;
+  width: -webkit-fill-available;
+  padding: 0px 14%;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+
+}
+
+nav>ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav>ul>li {
+  padding-right: 40px;
+}
+
+nav>ul>li>p {
+  font-weight: 700;
+  font-size: var(--text-nav-size);
+}
+
+nav>ul>li>p:hover {
+  color: #FF6565;
+}
+
+nav>ul>li:last-child {
+  padding: 0px;
+}
+
+section.percent>div img {
+  width: 200px;
+  height: 200px;
+}
+
+header > div {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+header > div > p {
+  text-align: center;
+  line-height: 26px;
+}
+
+header > div > button {
+  margin: 45px 0px 65px 0px;
+  padding: 13px 31px;
+  border-radius: 30px;
+  border: 0px;
+  background-color: var(--color-red);
+  color: var(--text-white);
+  box-shadow: 0px 2px 20px #071629;
+}
+header > div > button:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+header > div > h1,
+header > div > h1+p {
+  font-weight: bold;
+}
