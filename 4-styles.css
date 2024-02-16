@@ -50,7 +50,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: fill;
+  width: -webkit-fill-available;
   height: 800px;
   background-image: url("/images/headphones_hero_1.jpg");
   background-repeat: no-repeat;
@@ -60,6 +60,104 @@ header {
 
 }
 
+@media (max-width: 480px) {
+  header {
+    height: fit-content;
+  }
+  header > nav {
+    flex-direction: column;
+    margin-bottom: 15rem;
+  }
+  body > header > div {
+    width: 80%;
+  }
+  .menu-label {
+    display: block;
+    position: relative;
+    right: 10rem;
+    top: 1.3rem;
+  }
+
+  .menu {
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navlist {
+    display: none;
+    flex-direction: column;
+  }
+  
+  .navlist>li {
+    padding: 20px 0px;
+  }
+  .navlist>li:last-child {
+    padding: 20px 0px;
+  }
+
+  header .menu-checkbox:checked ~ .navlist {
+    display: flex;
+  }
+
+
+} /* Media query */
+
+header input,
+header label {
+  display: none;
+}
+
+header .menu-checkbox {
+  cursor: pointer;
+  padding: 2.5rem;
+  position: relative;
+  user-select: none;
+  display: none;
+}
+
+header .menu-label > span.icon  {
+  background-color: var(--text-white);
+  display: block;
+  width: 1rem;
+  height: .2rem;
+  position: relative;
+  transition: background .2s ease-out;
+}
+header .menu-label > .icon::after, 
+header .menu-label > .icon::before {
+  content: "";
+  display: block;
+  width: 180%;
+  height: 100%;
+  position: absolute;
+  background-color: var(--text-white);
+  transition: all .2s ease-out;
+}
+
+header .menu-label > .icon::before {
+  top: .7rem;
+}
+header .menu-label > .icon::after {
+  top: -.7rem;
+}
+
+header .menu-checkbox:checked ~ label>span.icon {
+  background-color: transparent;
+}
+
+
+header .menu-checkbox:checked ~ label>span.icon::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+header .menu-checkbox:checked ~ label>span.icon::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
 header>nav {
   max-width: 1000px;
   width: -webkit-fill-available;
@@ -67,7 +165,7 @@ header>nav {
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
-
+  align-items: center;
 }
 
 nav>ul {
