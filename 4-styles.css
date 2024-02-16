@@ -35,6 +35,8 @@ html {
 }
 h1 {
   font-size: 32px;
+  text-align: center;
+
 }
 p {
   font-size: 16px;
@@ -291,8 +293,7 @@ div.row > div > p {
 
 section.percent {
   color: var(--text-white);
-  width: fill;
-  height: 650px;
+  width: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -300,11 +301,10 @@ section.percent {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  justify-content: space-between;
+  padding: 100px 0px;
 }
 section.percent>div.title {
-  margin-top: 100px;
-  width: 665px;
+  width: 75%;
   
 }
 
@@ -342,7 +342,10 @@ section.percent>div.row.hexa > div {
 }
 
 section.percent>div.row.hexa {
-  margin-bottom: 100px;
+  width: 75%;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 6rem;
 }
 
 /* Contact */
